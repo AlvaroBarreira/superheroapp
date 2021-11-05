@@ -1,0 +1,45 @@
+.navbar {
+    height: 100px;
+}
+
+.navbar div a {
+    color: rgb(31, 31, 31) !important;
+    text-align: center !important;
+   
+}
+
+.dropdown-menu {
+    margin-right: 60px !important;
+}
+
+.navbar div {
+    margin-left: auto !important;
+}
+
+.logo {
+    width: 200px;
+    height: 50px;
+}
+
+
+
+@media screen and (max-width: 960px) {
+    .navbar div {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .navbar div {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .navbar div {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}

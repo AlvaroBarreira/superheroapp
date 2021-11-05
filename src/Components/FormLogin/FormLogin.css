@@ -1,0 +1,99 @@
+
+
+.form-login {
+    padding-top: 5%;
+    width: 400px;
+    height: 600px;
+    margin: auto !important;
+    background: rgba( 255, 255, 255, 0.5 );
+
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+box-shadow: rgba(20, 20, 48, 0.3) -5px 5px, rgba(20, 20, 48, 0.3) -10px 10px, rgba(20, 20, 48, 0.2) -15px 15px, rgba(20, 20, 48, 0.1) -20px 20px, rgba(20, 20, 48, 0.05) -25px 25px;
+}
+
+.title-form {
+    text-align: center;
+    padding-bottom: 20%;
+}
+
+.form-container {
+    margin: 120px auto 0 auto;
+}
+
+.btn-form {
+    display: flex;
+    margin: auto;
+}
+
+.email {
+    width: 250px;
+    border: none;
+    outline: none;
+    display: flex;
+    height: 50px;
+    border-radius: 3px;
+    margin: 15px auto;
+}
+
+.email-label {
+    width: fit-content;
+    display: flex;
+    margin: 15px auto;
+}
+
+.password {
+    width: 250px;
+    border: none;
+    outline: none;
+    display: flex;
+    height: 50px;
+    border-radius: 3px;
+    margin: 15px auto;
+}
+
+.password-label {
+    width: fit-content;
+    display: flex;
+    margin: 15px auto;
+}
+
+.text-danger {
+    margin: auto;
+    display: flex;
+    width: fit-content;
+    -webkit-text-stroke: none;
+}
+
+.forgot {
+    text-align: center;
+    color: black;
+    width: 125px;
+    font-size: 16px; 
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+.account {
+    text-align: center;
+    color: black;
+    width: 125px;
+    font-size: 16px; 
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.account:hover {
+    text-decoration: underline;
+}

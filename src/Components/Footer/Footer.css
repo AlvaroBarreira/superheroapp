@@ -1,0 +1,9 @@
+.mb-4 p {
+    -webkit-text-stroke: 1px black;
+    font-size: 25px;
+}
+
+.p-3 {
+    -webkit-text-stroke: 1px black;
+    font-size: 23px;
+}

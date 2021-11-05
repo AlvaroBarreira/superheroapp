@@ -1,0 +1,41 @@
+.squad-container {
+    margin: auto;
+    text-align: center;
+}
+
+.squad-text {
+    font-size: 45px;
+    color: white;
+    -webkit-text-stroke: 2px black;
+}
+
+@media screen and (max-width: 960px) {
+
+    .squad-container {
+        margin: 45px auto;
+        text-align: center;
+    }
+
+    .squad-text {
+        font-size: 45px;
+    }
+}
+
+
+@media screen and (max-width: 720px) {
+    .squad-container {
+        margin: 45px auto;
+        text-align: center;
+    }
+
+    .squad-text {
+        font-size: 45px;
+    }
+}
+
+
+@media screen and (max-width: 540px) {
+    .squad-text {
+        font-size: 45px;
+    }
+}
