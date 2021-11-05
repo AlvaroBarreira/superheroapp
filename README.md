@@ -7,7 +7,7 @@ Aplicacion web hecha con React Js y bootstrap con la finalidad de armar tu propi
 
 
 ## Instalacion
-* Clona este repositorio: `git clonehttps://github.com/AlvaroBarreira/superheroapp.git`
+* Clona este repositorio: `git clone https://github.com/AlvaroBarreira/superheroapp.git`
 * Instala las dependencias `npm install`
 * Ejecuta la app: `npm start`
 
