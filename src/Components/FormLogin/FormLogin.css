@@ -97,3 +97,16 @@ box-shadow: rgba(20, 20, 48, 0.3) -5px 5px, rgba(20, 20, 48, 0.3) -10px 10px, rg
 .account:hover {
     text-decoration: underline;
 }
+
+
+@media screen and (max-width: 500px) {
+    .btn-form {
+        margin-top: 60px;
+        padding: 15px 25px !important;
+        
+    }
+
+    .form-login {
+        width: 300px;
+    }
+}

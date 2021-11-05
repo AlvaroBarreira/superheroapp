@@ -6,4 +6,10 @@
 .p-3 {
     -webkit-text-stroke: 1px black;
     font-size: 23px;
+    letter-spacing: 1px;
+}
+
+.git {
+    -webkit-text-stroke: 1px black;
+    text-decoration: underline;
 }

@@ -16,7 +16,7 @@ function Footer() {
 
   <div className="text-center p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
     © 2021 Copyright:
-    <a className="text-white" href="https://github.com/AlvaroBarreira">GitHub</a>
+    <a className="text-white git" href="https://github.com/AlvaroBarreira">GitHub</a>
   </div>
 </footer>
     )
