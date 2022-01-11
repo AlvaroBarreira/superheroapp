@@ -1,7 +1,7 @@
 
 
 ## Aplicacion web/deploy
-*Importante! Activar contenido no seguro de Google Chrome o su navegador por preferencia para poder visualizar el sitio: Configuracion > Privacidad y Seguridad > Configuracion de Sitios > Configuracion de contenido adicional > Contenido no seguro. Abajo de todo agregue el siguiente link: "https://alksuperheroapp.netlify.app/"
+*Link: superheroapp-dusky.vercel.app
 ## Descripcion
 Aplicacion web hecha con React Js y bootstrap con la finalidad de armar tu propio equipo de superheroes utilizando la API de "https://superheroapi.com/".
 
