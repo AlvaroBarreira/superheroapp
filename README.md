@@ -1,7 +1,8 @@
 
 
 ## Aplicacion web/deploy
-*Link: superheroapp-dusky.vercel.app
+* Link: superheroapp-dusky.vercel.app
+
 ## Descripcion
 Aplicacion web hecha con React Js y bootstrap con la finalidad de armar tu propio equipo de superheroes utilizando la API de "https://superheroapi.com/".
 
@@ -13,6 +14,5 @@ Aplicacion web hecha con React Js y bootstrap con la finalidad de armar tu propi
 
 
 ## Datos para ingresar a la App
-
 * email: challenge@alkemy.org
 * password: react
