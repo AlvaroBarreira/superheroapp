@@ -1,5 +1,7 @@
 import React, { useContext } from 'react'
 import { HeroeContext } from '../../Contexts/HeroesContext'
+import FadeIn from 'react-fade-in';
+
 import './Powerstats.css'
 
 function Powerstats() {
@@ -15,13 +17,15 @@ function Powerstats() {
                     your team statistics
                 </h1>
             </div>
-
+            <FadeIn>
+            
             <div className="stat-container">
                 <h6>Combat </h6>
                 <div className="bar" style={{ width: team.length === 0 ? "0" : `${combat * 100 / 600}%` }}>
                     <p>{team.length === 0 ? 0 : combat}</p>
                 </div>
             </div>
+           
             <div className="stat-container">
                 <h6> Intelligence </h6>
                 <div className="bar" style={{ width: team.length === 0 ? "0" : `${intelligence * 100 / 600}%` }}>
@@ -52,6 +56,7 @@ function Powerstats() {
                     <p>{team.length === 0 ? 0 : strength}</p>
                 </div>
             </div>
+            </FadeIn>
         </div>
     )
 }

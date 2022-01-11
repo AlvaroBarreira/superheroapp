@@ -1,6 +1,5 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import { HeroeContext } from '../../Contexts/HeroesContext';
-import Button from 'react-bootstrap/Button'
 import Alert from 'react-bootstrap/Alert';
 
 function AlertDismissibleExample() {

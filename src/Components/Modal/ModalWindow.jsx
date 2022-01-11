@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import './ModalWindow.css';
 import Modal from 'react-bootstrap/Modal';
 import { HeroeContext } from '../../Contexts/HeroesContext';
@@ -8,9 +8,6 @@ function ModalWindow() {
    const {setModal, modal, modalData} = useContext(HeroeContext)
 
     const handleClose = () => setModal(false);
-    const handleShow = () => setModal(true);
-
-    console.log(modalData)
 
     return (
         <>
@@ -26,7 +23,7 @@ function ModalWindow() {
           </Modal.Header>
           <Modal.Body className="body">
             <div className="img-container">
-            <img className="modal-image" src={modalData.image}/>
+            <img className="modal-image" src={modalData.image} alt="modal-hero"/>
             </div>
             
             <div className="text-container">

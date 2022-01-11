@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import FadeIn from 'react-fade-in';
 import { HeroeContext } from '../../Contexts/HeroesContext';
 import './CardTeam.css'
 
@@ -17,7 +18,6 @@ function CardTeam() {
         setDurability,
         setSpeed,
         setStrength,
-        modalData,
         setModalData,
         setModal
         } = useContext(HeroeContext);
@@ -36,7 +36,6 @@ function CardTeam() {
 
     //Function set data ModalWindow 
     const handleClick = (t) => {
-        console.log(t)
         
         setModal(true)
 
@@ -98,14 +97,14 @@ function CardTeam() {
 
             return (
 
+                <FadeIn>
                 <div key={t.id} className="card p-0 p-sm-1 col-6 col-lg-4 border-0"  >
 
                     <div className="avatar-holder">
-                        <img src={t.image.url}/>
+                        <img src={t.image.url} alt="modal-heroe"/>
                     </div>
                     <div className="name" >
-                        <a >{t.name}</a>
-
+                        <h4 style={{ color: 'white' }}>{t.name}</h4>
                     </div>  
 
 
@@ -147,14 +146,14 @@ function CardTeam() {
                                 <p>{t.powerstats.strength === "null" ? t.powerstats.strength = 0 : t.powerstats.strength}</p>
                             </div>
                         </div>
-                        <a className="view-more" onClick={() => handleClick(t)}>View More</a>
+                        <button className="view-more" onClick={() => handleClick(t)}>View More</button>
                     </div>
-                    <a className="btn-delete" onClick={() => handleDelete(t)}>
+                    <button className="btn-delete" onClick={() => handleDelete(t)}>
                         <p>X</p>
-                    </a>
+                    </button>
                 </div>
 
-             
+                </FadeIn>
             )
         })
 

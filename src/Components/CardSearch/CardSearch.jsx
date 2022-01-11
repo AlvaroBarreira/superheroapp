@@ -108,7 +108,7 @@ function CardSearch({
 
         <div className="Card" style={{background: bgc}} key={data.id}>
              <div className="card-left" >
-             <img src={image} />
+             <img src={image} alt="hero"/>
              </div>
              <div className="card-right">
                 <div className="title">

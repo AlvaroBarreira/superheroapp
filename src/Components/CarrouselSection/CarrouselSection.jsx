@@ -2,7 +2,8 @@ import React, { useContext } from 'react'
 import AlertDismissibleExample from '../Alert/AlertDismissibleExample'
 import CardSearch from '../CardSearch/CardSearch';
 import Carousel from 'react-bootstrap/Carousel'
-import Loader from "react-loader-spinner";
+import Loader from "../Loader/Loader";
+import FadeIn from 'react-fade-in';
 import { HeroeContext } from '../../Contexts/HeroesContext'
 import './CarrouselSection.css'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
@@ -30,10 +31,7 @@ function CarrouselSection() {
                             loading ? (
                                 <div style={{margin: "35px auto", width: "fit-content"}}>
                                     <Loader
-                                        type="Oval"
-                                        color="rgba(0,0,0,0.4)"
-                                        height={100}
-                                        width={100}
+                                       
                                         
                                     />
                                 </div>
@@ -77,7 +75,7 @@ function CarrouselSection() {
 
                     }
             {
-                show && <AlertDismissibleExample />
+                show &&   <FadeIn> <AlertDismissibleExample /> </FadeIn> 
             }
            
             

@@ -22,7 +22,7 @@ function NavBar() {
 
         <Navbar expand="lg" className="navbar">
             <Container>
-                <Navbar.Brand className="navbar-brand" href="/"><img className="logo" src={Logo} alt="" /></Navbar.Brand>
+                <Navbar.Brand className="navbar-brand" onClick={() => history.push("/Home")}><img className="logo" src={Logo} alt="" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="drop">

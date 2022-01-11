@@ -4,7 +4,6 @@ import Row from 'react-bootstrap/Row';
 import CardTeam from '../CardTeam/CardTeam';
 import Powerstats from '../PowerStats/Powerstats'
 import { HeroeContext } from '../../Contexts/HeroesContext'
-import ModalWindow from '../Modal/ModalWindow';
 import './SquadSection.css'
 
 function SquadSection() {

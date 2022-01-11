@@ -1,22 +1,35 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { HeroeContext } from '../../Contexts/HeroesContext'
 import { useHistory } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
-import sendData from '../../Services/check'
+import Loader from '../Loader/Loader';
 import './FormLogin.css'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function FormLogin() {
 
+    const {isLoading, setIsLoading} = useContext(HeroeContext)
+
     const history = useHistory()
 
+    const pushHome = () => {
+
+        history.push('/Home')
+        
+        setIsLoading(false)
+
+    }
 
     //Function onSubmit, post petition
-    const sendValues = async (values) => {
+    const sendValues = (values) => {
         
-        const error = await sendData(values.email, values.password);
+        sessionStorage.setItem("token", values.email)
 
-        error ? console.log('error') : history.push('/Home')
+        setIsLoading(true)
+
+        setTimeout(pushHome, 2000)
+
     }
 
 
@@ -60,52 +73,63 @@ function FormLogin() {
             {({ errors }) => (
 
             <div className="form-container">
-                <Form className="form-login">
-                    <h1 className="title-form">LOG IN</h1>
-                    <div className="mb-3" controlId="formBasicEmail">
-                      
-                        <Field
-                            type="email"
-                            placeholder="Example: challenge@gmail.com"
-                            id="email"
-                            name="email"
-                            className="email"
-                    
-                        />
-                         <ErrorMessage name="email"  component={() => (
-                            <span className="text-danger text-center">
-                                {errors.email}
-                            </span>
-                        )} />
 
-                    </div>
-
-                    <div className="mb-3" controlId="formBasicPassword">
-                      
-                        <Field
-                            type="password"
-                            placeholder="Password"
-                            id="password"
-                            name="password"
-                            className="password"
+                {
+                    isLoading ? (
+                        <Form className="form-login">
+                            <Loader />
+                        </Form>
+                    ) : (
+                        <Form className="form-login">
+                        <h1 className="title-form">LOG IN</h1>
+                        <div className="mb-3" controlId="formBasicEmail">
+                          
+                            <Field
+                                type="email"
+                                placeholder="Example: challenge@gmail.com"
+                                id="email"
+                                name="email"
+                                className="email"
                         
-                        />
-                        <ErrorMessage name="password" component={() => (
-                            <span className="text-danger">
-                                {errors.password}
-                            </span>
-                        )} />
-                   
-                    </div>
+                            />
+                             <ErrorMessage name="email"  component={() => (
+                                <span className="text-danger text-center">
+                                    {errors.email}
+                                </span>
+                            )} />
+    
+                        </div>
+    
+                        <div className="mb-3" controlId="formBasicPassword">
+                          
+                            <Field
+                                type="password"
+                                placeholder="Password"
+                                id="password"
+                                name="password"
+                                className="password"
+                            
+                            />
+                            <ErrorMessage name="password" component={() => (
+                                <span className="text-danger">
+                                    {errors.password}
+                                </span>
+                            )} />
+                       
+                        </div>
+                    
+                        <Button variant="primary" type="submit">
+                            Submit
+                        </Button>
+    
+                        <p className="forgot">Forgot your password?</p>
+    
+                        <p className="account">Don't have an account?</p>
+                    </Form>
+                    )
+                }
                 
-                    <Button className="btn-form" variant="primary" type="submit">
-                        Submit
-                    </Button>
-
-                    <p className="forgot">Forgot your password?</p>
-
-                    <p className="account">Don't have an account?</p>
-                </Form>
+               
               </div>  
             )}
         </Formik>

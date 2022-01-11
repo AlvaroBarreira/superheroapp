@@ -4,9 +4,9 @@ import { Route, Redirect } from 'react-router'
 
 function PrivateRoute(props) {
 
-    const user = JSON.parse(sessionStorage.getItem('token'))
+    const user = sessionStorage.getItem('token')
     
-    if (user === null) return <Redirect to="/" />
+    if (user === null || user === undefined) return <Redirect to="/" />
 
     return (
         <Route  {...props}/>

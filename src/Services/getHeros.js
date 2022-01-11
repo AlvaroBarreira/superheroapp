@@ -11,6 +11,8 @@ const getData = async (setCard,values) => {
 
         if(response.data.error) return [];
 
+        
+
         setCard(response.data.results)
 
         

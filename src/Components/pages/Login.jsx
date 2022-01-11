@@ -16,11 +16,9 @@ function Login() {
     }, [history, token])
 
     return (
-
-      
+    
             <FormLogin />
-         
-       
+                
     )
 }
 

@@ -41,12 +41,10 @@ function Search() {
 
 
     useEffect(() => {    
-  
-        
+     
         setResult(card.length)
-
-      
-    }, [card])
+     
+    }, [card, setResult])
 
 
 
@@ -66,9 +64,9 @@ function Search() {
 
                     //Name validation
                     if (!values.name) {
-                        errors.name = 'Error, ingrese un nombre'
+                        errors.name = 'Please, submit a name'
                     } else if (values.name === "") {
-                        errors.name = "Error, ingrese un nombre"
+                        errors.name = 'Please, submit a name'
                     }
                     return errors;
 

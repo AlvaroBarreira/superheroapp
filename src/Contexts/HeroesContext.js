@@ -1,5 +1,4 @@
-import { useState, createContext, useEffect } from "react";
-import { getData } from '../Services/getHeros';
+import { useState, createContext } from "react";
 const HeroeContext = createContext();
 
 const HeroeData = ({children}) => {
@@ -54,8 +53,7 @@ const HeroeData = ({children}) => {
 
     const [modal, setModal] = useState(false);
 
-    console.log(card)
-
+    const [isLoading, setIsLoading] = useState(false)
 
     const values = {
         card,
@@ -94,6 +92,8 @@ const HeroeData = ({children}) => {
         setModalData,
         modal, 
         setModal,
+        setIsLoading,
+        isLoading
     }
 
     return (
